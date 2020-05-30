@@ -5,10 +5,10 @@ let cacheName = '300520-0058'; // Q: What if you change the html,
 // in order for the service worker to detect that the files are new, 
 // and hence cache the files again when the user refreshes the page. 
 let filesToCache = [
-  "/","/js", // TODO: Can you cahce an entire folder?
-  "/index.html", "/plants.html", "/events.html", "/trails.html", "/contact.html", //"animals.html", "insects.html",
-  "/idb.js", "/db.js", "/diarydb.js",
-  "/init-nav.js"
+  "/", // "/js", // TODO: Can you cahce an entire folder?
+  "/index.html", // "/plants.html", "/events.html", "/trails.html", "/contact.html", //"animals.html", "insects.html",
+  "/idb.js", "/db.js", "/diarydb.js"
+  // "/init-nav.js"
 ]
 
 /* 
