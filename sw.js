@@ -1,4 +1,4 @@
-let cacheName = '300520-0058'; // Q: What if you change the html, 
+let cacheName = 'sw1'; // Q: What if you change the html, 
 // but the service worker has already cached the files,
 // thus the webpage loads fromm the cache, and the changes to the html do not show?
 // A: Change the cache name 
