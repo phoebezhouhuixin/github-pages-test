@@ -10,10 +10,34 @@ let cacheName = 'sw1'; // Q: What if you change the html,
 
 
 let filesToCache = [
-  "./",  "./js", "./css", "./scss", "./images",
+  "./", // "./js", "./css", "./scss", "./images",
   "./index.html", "./plants.html", "./animals.html", "./insects.html",
   "./trails.html", "./contact.html", "./about.html",
-  "./idb.js", "./db.js", "./diarydb.js"
+  "./idb.js", "./db.js", "./diarydb.js",
+
+  "images/about.jpg",
+  "images/croc.jpg",
+  "images/crocsmall.jpg",
+  "images/damselfly.jpg",
+  "images/damselflysmall.jpg",
+  "images/events.jpg",
+  "images/fishpoison.jpg",
+  "images/fishpoisonsmall.jpg",
+  "images/fishtailpalm.jpg",
+  "images/fishtailpalmsmall.jpg",
+  "images/img_1.jpg",
+  "images/img_2.jpg",
+  "images/img_3.jpg",
+  "images/mudskipper.jpg",
+  "images/mudskippersmall.jpg",
+  "images/seaalmond.jpg",
+  "images/seaalmondsmall.jpg",
+  "images/simpohair.jpg",
+  "images/simpohairsmall.jpg",
+  "images/treeclimbingcrab.jpg",
+  "images/treeclimbingcrabsmall.jpg",
+  "images/weaverant.jpg",
+  "images/weaverantsmall.jpg"
 ]
 
 /* 
