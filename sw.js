@@ -24,7 +24,7 @@ self.addEventListener('install', function (e) {
   e.waitUntil(
     caches.open(cacheName).then(function (cache) {
       console.log("5. Adding files to cache");
-      console.log("6. cache.addAll(['/']", cache.addAll(['/']));
+      console.log("6. cache.addAll(['../']", cache.addAll(['../', '../index.html']));
       return cache.addAll([""]);// TODO: Change back
     })
   )}
