@@ -2,7 +2,7 @@
     "name": "Wildlife Spoors - from the NTU Nature Guiding Committee",
     "short_name": "Wildlife Spoors",
     "lang":"en-US",
-    "start_url":"/index.html",
+    "start_url":"/github-pages-test/index.html",
     "display":"standalone",
     "background_color":"white",
     "theme_color":"white",
