@@ -17,25 +17,27 @@ the website online. This will add the all the files
 listed in filesToCache to the browser cache.
 
 */
-self.addEventListener('install', function(e){
-  console.log("on install")
-    console.log(cacheName);
+self.addEventListener('install', function (e) {
+  console.log("2. Inside sw.js, on install")
+  console.log("3. cacheName", cacheName);
+  console.log("4. caches.open(cacheName): ", caches.open(cacheName));
   e.waitUntil(
-    caches.open(cacheName).then(function(cache){
-      console.log("Adding files to cache")
-      return cache.addAll(filesToCache)
+    caches.open(cacheName).then(function (cache) {
+      console.log("5. Adding files to cache");
+      console.log("6. cache.addAll(['/']", cache.addAll(['/']));
+      return cache.addAll([""]);// TODO: Change back
     })
-  )
-})
+  )}
+)
 
 /*
 If offline or if the file exists in the cache, then it will fetch the files from cache
 */
-self.addEventListener('fetch', function(e){
+self.addEventListener('fetch', function (e) {
   e.respondWith(
-    caches.match(e.request,{cacheName:cacheName}).then(function(response){
-        console.log("Fetching "+e.request.url);
-      return response || fetch (e.request)
+    caches.match(e.request, { cacheName: cacheName }).then(function (response) {
+      console.log("Fetching " + e.request.url);
+      return response || fetch(e.request)
     })
   )
 })
