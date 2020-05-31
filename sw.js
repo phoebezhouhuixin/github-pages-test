@@ -10,7 +10,7 @@ let cacheName = 'sw1'; // Q: What if you change the html,
 
 
 let filesToCache = [
-  "./", // "./js", "./css", "./scss", "./images",
+  "./",  "./js", "./css", "./scss", "./images",
   "./index.html", "./plants.html", "./animals.html", "./insects.html",
   "./trails.html", "./contact.html", "./about.html",
   "./idb.js", "./db.js", "./diarydb.js"
