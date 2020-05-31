@@ -4,12 +4,26 @@ let cacheName = 'sw1'; // Q: What if you change the html,
 // A: Change the cache name 
 // in order for the service worker to detect that the files are new, 
 // and hence cache the files again when the user refreshes the page. 
+
+
+
+
+
+
+// let filesToCache = [
+//   "../",  "../js",
+//   "../index.html", "../plants.html", "../animals.html", "../insects.html",
+//   "../trails.html", "../contact.html", "../about.html",
+//   "../idb.js", "../db.js", "../diarydb.js"
+//   // "/init-nav.js"
+// ]
+
+
 let filesToCache = [
-  "/",  "../js",
-  "../index.html", "../plants.html", "../animals.html", "../insects.html",
-  "../trails.html", "../contact.html", "../about.html",
-  "../idb.js", "../db.js", "../diarydb.js"
-  // "/init-nav.js"
+  "./",  
+  "./index.html", "./plants.html", "./animals.html", "./insects.html",
+  "./trails.html", "./contact.html", "./about.html",
+  "./idb.js", "./db.js", "./diarydb.js"
 ]
 
 /* 
@@ -25,8 +39,8 @@ self.addEventListener('install', function (e) {
   e.waitUntil(
     caches.open(cacheName).then(function (cache) {
       console.log("5. Adding files to cache");
-      // console.log("6. cache.addAll(['../']", cache.addAll(['../', '../index.html']));
-      return cache.addAll([filesToCache]);// TODO: OH MY GOD. FINALLY
+      console.log("6. cache.addAll(filesToCache:", cache.addAll(filesToCache));
+      return cache.addAll(filesToCache);
     })
   )}
 )

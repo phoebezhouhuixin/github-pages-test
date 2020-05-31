@@ -5,7 +5,10 @@ window.onload = async () => {
 
   if ('serviceWorker' in navigator) {
     console.log("1. Registering the service worker");
-    let registeredWorker = await navigator.serviceWorker.register('./sw.js');
+    console.log("1.1 window.location.pathname: ", window.location.pathname);
+    // let registeredWorker = await navigator.serviceWorker.register('./sw.js');
+    let registeredWorker = await navigator.serviceWorker.register(`${window.location.pathname}sw.js`);
+
     console.log("7. Registered worker with scope: ", registeredWorker.scope)
     registeredWorker.addEventListener('updatefound', () => {
       // An updated service worker has appeared in reg.installing
